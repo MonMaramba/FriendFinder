@@ -1,0 +1,30 @@
+var friendsArr = [{
+    "name":"Richie",
+    "photo":"",
+    "sex":"",
+    "scores":[]
+}, 
+{
+    "name":"Nina",
+    "photo":"",
+    "sex":"",
+    "scores":[]
+}, 
+{
+    "name":"Peggy",
+    "photo":"",
+    "sex":"",
+    "scores":[]
+}, 
+{
+    "name":"Carl",
+    "photo":"",
+    "sex":"",
+    "scores":[]
+}, 
+{
+    "name":"Ricardo",
+    "photo":"",
+    "sex":"",
+    "scores":[]
+}]
