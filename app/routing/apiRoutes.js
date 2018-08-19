@@ -6,6 +6,9 @@ var app = express();
 //path to friends array
 var friendsArray = require("../data/friends.js");
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 //routing to handle get and post
 module.exports = function(app) {
     app.get("/api/friends", function(req, res){
@@ -39,6 +42,6 @@ app.post("/api/friends", function(req, res){
     friendsArray.push(user);
 
     res.json(friendsArray[buddyAtIndex]);
-
+    console.log(res);
 
 })
