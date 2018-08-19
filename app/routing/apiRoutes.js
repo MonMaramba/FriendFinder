@@ -1,5 +1,6 @@
 var path = require("path");
 var express = require("express");
+var bodyParser = require("body-parser");
 
 var app = express();
 
@@ -8,6 +9,8 @@ var friendsArray = require("../data/friends.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 //routing to handle get and post
 module.exports = function(app) {
@@ -18,6 +21,7 @@ module.exports = function(app) {
 
 app.post("/api/friends", function(req, res){
     var user = req.body;
+    console.log(user);
     //to parseInt user scores
     for(var i = 0; i < user.scores.length; i++){
         user.scores[i] = parseInt(user.scores[i]);
